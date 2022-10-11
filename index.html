@@ -14,12 +14,12 @@
 
       <div class="dice">
         <p>Player 1</p>
-        <img class="img1" src="">
+        <img class="img1" src="./images/dice6.png">
       </div>
 
       <div class="dice">
         <p>Player 2</p>
-        <img class="img2" src="">
+        <img class="img2" src="./images/dice6.png">
       </div>
 
     </div>
@@ -28,6 +28,35 @@
   </body>
 
   <footer>
-    www 🎲 App Brewery 🎲 com
+    Let's play the dice  🎲  game
   </footer>
+
+  <script>
+   let x = Math.floor((Math.random() * 6)) + 1;
+
+   let diceimage = "images/dice" + x + ".png" 
+
+   
+     document.querySelectorAll("img")[0].setAttribute("src",diceimage);
+
+     let x2 = Math.floor((Math.random() * 6)) + 1;
+
+   let diceimage2 = "images/dice" + x2 + ".png" 
+
+   
+     document.querySelectorAll("img")[1].setAttribute("src",diceimage2)
+
+     if(x>x2)
+     document.querySelector("h1").innerHTML = "🚩 Player 1 Wins!";
+  
+ 
+     if(x<x2) {
+      document.querySelector("h1").innerHTML = "🚩 Player 2 Wins!";
+  }
+
+  if(x==x2){
+    document.querySelector("h1").innerHTML = "🚩 DRAW";
+  }
+
+  </script>
 </html>
